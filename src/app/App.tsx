@@ -1,9 +1,9 @@
-import {Link} from "react-router-dom";
 import './styles/index.scss'
 import {classNames} from "shared/lib/classNames/classNames";
 import {useTheme} from "app/providers/ThemeProvider";
 import {AppRuter} from "app/providers/router";
 import {Navbar} from "widgets/Navabr";
+import {Sidebar} from "widgets/Sidebar";
 
 
 const App = () => {
@@ -13,7 +13,10 @@ const App = () => {
     return (
         <div className={classNames('app', {}, [theme])}>
             <Navbar />
-            <AppRuter />
+            <div className={"content-page"}>
+                <Sidebar />
+                <AppRuter />
+            </div>
         </div>
     );
 };
