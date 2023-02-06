@@ -1,5 +1,8 @@
 {
   "Текстовый пример" : "Test example",
   "Перевод": "Translate",
-  "Русский": "English"
+  "Русский": "English",
+  "Главная": "Main",
+  "О сайте": "About us",
+  "свернуть": "toogle"
 }

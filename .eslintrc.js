@@ -5,7 +5,8 @@ module.exports = {
     },
     extends: [
         'plugin:react/recommended',
-        'standard-with-typescript'
+        'standard-with-typescript',
+        'plugin:i18next/recommended'
     ],
     overrides: [
     ],
@@ -15,7 +16,8 @@ module.exports = {
         project: ['tsconfig.json']
     },
     plugins: [
-        'react'
+        'react',
+        'i18next'
     ],
     rules: {
         indent: [2, 4, { MemberExpression: 1 }],
@@ -26,7 +28,7 @@ module.exports = {
         '@typescript-eslint/naming-convention': 'off',
         '@typescript-eslint/ban-ts-comment': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
-        "@typescript-eslint/consistent-type-assertions": "warn"
+        '@typescript-eslint/consistent-type-assertions': 'warn'
     },
     globals: {
         __IS_DEV__: true
