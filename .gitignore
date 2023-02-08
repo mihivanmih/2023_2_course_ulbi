@@ -6,3 +6,4 @@
 *.module.css
 /extractedTranslations
 *.css
+/dist
