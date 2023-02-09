@@ -28,7 +28,19 @@ module.exports = {
         '@typescript-eslint/naming-convention': 'off',
         '@typescript-eslint/ban-ts-comment': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
-        '@typescript-eslint/consistent-type-assertions': 'warn'
+        '@typescript-eslint/consistent-type-assertions': 'warn',
+        '@typescript-eslint/consistent-type-imports': [
+            'error',
+            {
+                prefer: 'type-imports'
+            }
+        ],
+        'react/self-closing-comp': [
+            'error', {
+                component: true,
+                html: true
+            }
+        ]
     },
     globals: {
         __IS_DEV__: true

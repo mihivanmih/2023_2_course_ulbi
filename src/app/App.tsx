@@ -4,11 +4,11 @@ import { useTheme } from 'app/providers/ThemeProvider'
 import { AppRuter } from 'app/providers/router'
 import { Navbar } from 'widgets/Navabr'
 import { Sidebar } from 'widgets/Sidebar'
-import { type FC, Suspense } from 'react'
+import type { FC } from 'react'
+import { Suspense } from 'react'
 
 const App: FC = () => {
     const { theme } = useTheme()
-
     return (
         <div className={classNames('app', {}, [theme])}>
             <Suspense fallback={''}>
