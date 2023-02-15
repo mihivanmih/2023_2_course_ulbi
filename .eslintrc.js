@@ -8,8 +8,6 @@ module.exports = {
         'standard-with-typescript',
         'plugin:i18next/recommended'
     ],
-    overrides: [
-    ],
     parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -29,6 +27,7 @@ module.exports = {
         '@typescript-eslint/ban-ts-comment': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/consistent-type-assertions': 'warn',
+        'i18next/no-literal-string': 'warn',
         '@typescript-eslint/consistent-type-imports': [
             'error',
             {
@@ -49,5 +48,13 @@ module.exports = {
         react: {
             version: 'detect'
         }
-    }
+    },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off'
+            }
+        }
+    ]
 }
