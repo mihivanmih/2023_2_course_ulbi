@@ -1,6 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 import styles from './AppLink.module.scss'
-import { Link, type LinkProps } from 'react-router-dom'
+import type { LinkProps } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import React from 'react'
 
 export const enum AppLinkTheme {
