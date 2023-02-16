@@ -28,6 +28,7 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/consistent-type-assertions': 'warn',
         'i18next/no-literal-string': 'warn',
+        '@typescript-eslint/prefer-includes': 'off',
         '@typescript-eslint/consistent-type-imports': [
             'error',
             {

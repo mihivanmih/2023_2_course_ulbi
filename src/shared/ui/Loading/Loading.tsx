@@ -7,7 +7,9 @@ interface PageLoaderProps {
 
 export const Loading = ({ className = '' }: PageLoaderProps) => {
     return (
-        <div className={classNames('lds-ellipsis', {}, [className])}>
+        <div
+            data-testid={'loading'}
+            className={classNames('lds-ellipsis', {}, [className])}>
             <div />
             <div />
             <div />
