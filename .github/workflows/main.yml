@@ -29,5 +29,7 @@ jobs:
         run: npm run unitJest
       - name: build storybook
         run: npm run build-storybook
-      - name: screenshot testing
+      - name: screenshot testing Mac
         run: npm run test:ui:si:Mac
+      - name: screenshot testing
+        run: npm run test:ui:si
