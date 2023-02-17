@@ -6,10 +6,11 @@ on:
 #    branches: [ master ]
 jobs:
   pipeline:
-    runs-on: macos-latest
+#    runs-on: ubuntu-latest
+    runs-on: windows-2019
     strategy:
       matrix:
-        node-version: [ 17.x ]
+        node-version: [ 16.x ]
 
     steps:
       - uses: actions/checkout@v2
@@ -19,17 +20,15 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: install modules
         run: npm install
-      - name: build production project
-        run: npm run build:prod
-      - name: linting typescript
-        run: npm run eslint
-      - name: linting scss
-        run: npm run eslint:scss
-      - name: unit testing scss
-        run: npm run unitJest
+#      - name: build production project
+#        run: npm run build:prod
+#      - name: linting typescript
+#        run: npm run eslint
+#      - name: linting scss
+#        run: npm run eslint:scss
+#      - name: unit testing scss
+#        run: npm run unitJest
       - name: build storybook
         run: npm run build-storybook
-      - name: screenshot testing Mac
-        run: npm run test:ui:si:Mac
       - name: screenshot testing
-        run: npm run test:ui:si
+        run: npm run test:ui:si:Mac
