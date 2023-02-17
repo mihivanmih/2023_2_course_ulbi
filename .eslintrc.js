@@ -29,6 +29,7 @@ module.exports = {
         '@typescript-eslint/consistent-type-assertions': 'warn',
         'i18next/no-literal-string': 'warn',
         'react/display-name': 'off',
+        'linebreak-style': 0,
         '@typescript-eslint/prefer-includes': 'off',
         '@typescript-eslint/consistent-type-imports': [
             'error',
