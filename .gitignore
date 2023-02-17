@@ -7,3 +7,4 @@
 /extractedTranslations
 *.css
 /dist
+/storybook-static
