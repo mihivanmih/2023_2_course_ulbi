@@ -6,10 +6,10 @@ on:
 #    branches: [ master ]
 jobs:
   pipeline:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ 16.x ]
+        node-version: [ 17.x ]
 
     steps:
       - uses: actions/checkout@v2
@@ -21,12 +21,12 @@ jobs:
         run: npm install
       - name: build production project
         run: npm run build:prod
-#      - name: linting typescript
-#        run: npm run eslint
-#      - name: linting scss
-#        run: npm run eslint:scss
-#      - name: unit testing scss
-#        run: npm run unitJest
+      - name: linting typescript
+        run: npm run eslint
+      - name: linting scss
+        run: npm run eslint:scss
+      - name: unit testing scss
+        run: npm run unitJest
       - name: build storybook
         run: npm run build-storybook
       - name: screenshot testing
