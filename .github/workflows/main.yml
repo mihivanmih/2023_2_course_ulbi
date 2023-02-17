@@ -31,4 +31,4 @@ jobs:
       - name: build storybook
         run: npm run build-storybook
       - name: screenshot testing
-        run: npm run test:ui:si:Mac
+        run: npm run test:ui:si
