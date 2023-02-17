@@ -6,8 +6,7 @@ on:
 #    branches: [ master ]
 jobs:
   pipeline:
-#    runs-on: ubuntu-latest
-    runs-on: windows-2019
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [ 16.x ]
@@ -20,14 +19,14 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: install modules
         run: npm install
-#      - name: build production project
-#        run: npm run build:prod
-#      - name: linting typescript
-#        run: npm run eslint
-#      - name: linting scss
-#        run: npm run eslint:scss
-#      - name: unit testing scss
-#        run: npm run unitJest
+      - name: build production project
+        run: npm run build:prod
+      - name: linting typescript
+        run: npm run eslint
+      - name: linting scss
+        run: npm run eslint:scss
+      - name: unit testing scss
+        run: npm run unitJest
       - name: build storybook
         run: npm run build-storybook
       - name: screenshot testing
