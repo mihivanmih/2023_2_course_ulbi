@@ -24,7 +24,8 @@ jobs:
         run: npm run eslint
       - name: linting scss
         run: npm run eslint:scss
-      - name: unit testing scss
+      - name: unit testing
+        run: npm run unitJest
   storybook_loki:
     runs-on: windows-2019
     strategy:
@@ -38,7 +39,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: install modules
         run: npm ci
-        run: npm run unitJest
       - name: build storybook
         run: npm run build-storybook
       - name: screenshot testing
