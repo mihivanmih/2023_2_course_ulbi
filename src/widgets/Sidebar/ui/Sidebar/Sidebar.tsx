@@ -33,7 +33,7 @@ export const Sidebar: FC<SidebarProps> = ({ className = '' }: SidebarProps) => {
                 className={styles.collapseBtn}
                 theme={ThemeButton.BACKGROUND_INVERTED}
                 square
-                size={ButtonSize.L}
+                size={ButtonSize.XL}
                 onClick={onToggle}>
                 {collapsed ? '>' : '<'}
             </Button>
@@ -51,7 +51,7 @@ export const Sidebar: FC<SidebarProps> = ({ className = '' }: SidebarProps) => {
                     <AppLink to={RoutePath.about} theme={AppLinkTheme.SECONDARY} className={styles.item}>
                         <MainIcon className={styles.icon}/>
                         <span className={styles.link}>
-                            {t('О сайте')}
+                            {t('О сайте')} {t('О сайте')}
                         </span>
                     </AppLink>
                 </div>

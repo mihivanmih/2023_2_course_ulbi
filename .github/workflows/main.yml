@@ -22,8 +22,10 @@ jobs:
         run: npm run build:prod
       - name: linting typescript
         run: npm run eslint
+        if: always()
       - name: linting scss
         run: npm run eslint:scss
+        if: always()
       - name: unit testing
         run: npm run unitJest
 #  storybook_loki:
