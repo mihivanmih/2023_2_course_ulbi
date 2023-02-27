@@ -8,5 +8,4 @@
 *.css
 /dist
 /storybook-static
-/.loki
 /coverage
