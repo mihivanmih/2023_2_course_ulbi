@@ -21,6 +21,8 @@
     "build-storybook": "build-storybook -c ./config/storybook",
     "test:ui:si": "npx loki --requireReference --reacturi file:./storybook-static",
 
+    "build-storybook:test": "build-storybook -s public",
+
     "test:ui:report": "npm run visual:report:json && npm run visual:report:html",
     "visual:report:json": "node scripts/generate-visual-json-report.js",
     "visual:report:html": "reg-cli --from .loki/report.json --report .loki/report.html"
