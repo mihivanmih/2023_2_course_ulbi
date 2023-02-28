@@ -12,17 +12,13 @@
     "eslint:scss": "npx stylelint \"**/*.scss\"",
     "eslint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
     "unitJest": "jest",
-
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
     "loki": "npx loki update",
     "test:ui": "npx loki test",
     "test:ui:ok": "npx loki approve",
-
     "build-storybook": "build-storybook -c ./config/storybook",
     "test:ui:si": "npx loki --requireReference --reacturi file:./storybook-static",
-
     "build-storybook:test": "build-storybook -s public",
-
     "test:ui:report": "npm run visual:report:json && npm run visual:report:html",
     "visual:report:json": "node scripts/generate-visual-json-report.js",
     "visual:report:html": "reg-cli --from .loki/report.json --report .loki/report.html"
@@ -65,6 +61,7 @@
     "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-storybook": "^0.6.10",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",

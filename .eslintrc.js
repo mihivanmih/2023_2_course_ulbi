@@ -15,7 +15,8 @@ module.exports = {
     },
     plugins: [
         'react',
-        'i18next'
+        'i18next',
+        'react-hooks'
     ],
     rules: {
         indent: [2, 4, { MemberExpression: 1 }],
@@ -37,6 +38,8 @@ module.exports = {
                 prefer: 'type-imports'
             }
         ],
+        'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+        'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
         'react/self-closing-comp': [
             'error', {
                 component: true,
@@ -54,9 +57,10 @@ module.exports = {
     },
     overrides: [
         {
-            files: ['**/src/**/*.test.{ts,tsx}'],
+            files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
             rules: {
-                'i18next/no-literal-string': 'off'
+                'i18next/no-literal-string': 'off',
+                'max-len': 'off'
             }
         }
     ]
