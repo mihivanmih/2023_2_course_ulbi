@@ -4,6 +4,7 @@
 @import "themes/dark";
 
 body {
+  font: var(--font-m);
   font-size: var(--font-m);
   color: var(--primary-color);
 }
