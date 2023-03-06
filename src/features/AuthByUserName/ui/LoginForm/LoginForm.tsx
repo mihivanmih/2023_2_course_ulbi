@@ -8,6 +8,7 @@ import { memo, useCallback } from 'react'
 import { loginActions } from '../../model/slice/loginSlice'
 import { getLoginState } from '../../model/selectors/getLoginState'
 import { loginByUserName } from '../../model/services/loginByUserName/loginByUserName'
+import { Text, TextTheme } from 'shared/ui/Text/Text'
 
 interface LoginFormProps {
     className?: string
@@ -33,7 +34,8 @@ export const LoginForm = memo(({ className = '' }: LoginFormProps) => {
 
     return (
         <div className={classNames(styles.LoginForm, {}, [className])}>
-            {error && <div>error</div>}
+            <Text title={t('Форма авторизации')} />
+            {error && <Text text={error} theme={TextTheme.ERROR} />}
             <Input type="text" className={styles.input} label={t('Введите логин')} autofocus onChange={onChangeUsername} value={username}/>
             <Input type="text" className={styles.input} label={t('Введите пароль')} onChange={onChangePassword} value={password}/>
             <Button
