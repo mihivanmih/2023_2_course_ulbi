@@ -10,5 +10,10 @@
   "Обновить страницу": "Refresh Page",
   "throw error": "throw error",
   "ru": "En",
-  "Войти": "Login"
+  "Войти": "Login",
+  "Выйти": "Go out",
+  "Форма авторизации": "Authorization form",
+  "Введите логин ": "Enter your username",
+  "Введите пароль ": "Enter password",
+  "Вы ввели неверный логин или пароль": "You have entered an incorrect username or password"
 }
